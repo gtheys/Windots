@@ -30,6 +30,10 @@ $wingetDeps = @(
   "lua-language-server"
   "make"
   "awscli"
+  "gpg4win"
+  "opentofu"
+  "terraform" # Install for neovim LSP of my tofu files
+  "miniconda"
   "starship.starship"
 )
 $chocoDeps = @(
