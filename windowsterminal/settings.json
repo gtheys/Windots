@@ -28,6 +28,11 @@
             "command": "find",
             "keys": "ctrl+shift+f"
         }
+        ,
+        {
+            "command": "togglePaneZoom",
+            "keys": "ctrl+shift+z"
+        }
     ],
     "alwaysShowTabs": true,
     "centerOnLaunch": true,
