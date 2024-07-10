@@ -4,6 +4,7 @@ local config = wezterm.config_builder()
 local opacity = 0.75
 local transparent_bg = "rgba(22, 24, 26, " .. opacity .. ")"
 
+
 -- Font
 config.font = wezterm.font_with_fallback({
     {
@@ -25,7 +26,7 @@ config.animation_fps = 60
 config.cursor_blink_rate = 250
 
 -- Colors
-config.colors = require("cyberdream")
+config.colors = require("tokyo")
 config.force_reverse_video_cursor = true
 
 -- Shell
