@@ -4,6 +4,10 @@ local config = wezterm.config_builder()
 local opacity = 0.75
 local transparent_bg = "rgba(22, 24, 26, " .. opacity .. ")"
 
+-- I use Ubuntu wsl in my wezterm
+-- Windows terminal is powershell
+
+config.default_domain = 'WSL:Ubuntu'
 
 -- Font
 config.font = wezterm.font_with_fallback({
