@@ -55,6 +55,7 @@ Set-Alias -Name tif Show-ThisIsFine
 Set-Alias -Name vim -Value nvim
 Set-Alias -Name vi -Value nvim
 Set-Alias -Name cat -Value bat
+Set-Alias -Name gs -Value Get-GitStatus
 Set-Alias -Name us -Value Update-Software
 Set-Alias -Name rm -Value Remove-ItemExtended
 
@@ -62,6 +63,11 @@ Add-ProfileLogEntry "Aliases loaded"
 
 # Putting the FUN in Functions
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+function Get-GitStatus {
+    git status
+  }
+
 function Find-WindotsRepository {
     <#
     .SYNOPSIS
