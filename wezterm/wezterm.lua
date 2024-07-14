@@ -34,7 +34,7 @@ config.colors = require("tokyo")
 config.force_reverse_video_cursor = true
 
 -- Shell
-config.default_prog = { "pwsh", "-NoLogo" }
+-- config.default_prog = { "pwsh", "-NoLogo" }
 
 -- Tabs
 config.enable_tab_bar = true
