@@ -62,6 +62,7 @@ Set-Alias -Name dc -Value cd
 
 Add-ProfileLogEntry "Aliases loaded"
 
+
 # Putting the FUN in Functions
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -318,6 +319,8 @@ $ENV:_ZO_DATA_DIR = $ENV:WindotsLocalRepo
 $ENV:OBSIDIAN_PATH = "$HOME\iCloudDrive\iCloud~md~obsidian\Obsidian"
 $ENV:BAT_CONFIG_DIR = "$ENV:WindotsLocalRepo\bat"
 $ENV:FZF_DEFAULT_OPTS = '--color=fg:-1,fg+:#ffffff,bg:-1,bg+:#3c4048 --color=hl:#5ea1ff,hl+:#5ef1ff,info:#ffbd5e,marker:#5eff6c --color=prompt:#ff5ef1,spinner:#bd5eff,pointer:#ff5ea0,header:#5eff6c --color=gutter:-1,border:#3c4048,scrollbar:#7b8496,label:#7b8496 --color=query:#ffffff --border="rounded" --border-label="" --preview-window="border-rounded" --height 40% --preview="bat -n --color=always {}"'
+$ENV:PYENV_ROOT="$HOME/.pyenv"
+$ENV:Path+=";$PYENV_ROOT/bin"
 
 # Check for Windots and software updates while prompt is loading
 Start-ThreadJob -ScriptBlock {
@@ -398,6 +401,10 @@ Set-PSReadLineOption -Colors @{ InlinePrediction = '#875f5f'}
 
 Set-PSReadLineKeyHandler -Chord "Ctrl+RightArrow" -Function ForwardWord
 
+
+# Adding this to make refreshenv work
+# Helsp with refreshing env variables without restarting the console
+Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
 
 # Skip fastfetch for non-interactive shells and vim terminals
 if ([Environment]::GetCommandLineArgs().Contains("-NonInteractive") -or [Environment]::GetCommandLineArgs().Contains("-CustomPipeName")) {
