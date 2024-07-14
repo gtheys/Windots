@@ -58,6 +58,7 @@ Set-Alias -Name cat -Value bat
 Set-Alias -Name gs -Value Get-GitStatus
 Set-Alias -Name us -Value Update-Software
 Set-Alias -Name rm -Value Remove-ItemExtended
+Set-Alias -Name dc -Value cd
 
 Add-ProfileLogEntry "Aliases loaded"
 
