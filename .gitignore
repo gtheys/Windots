@@ -1,4 +1,4 @@
 nvim/lazy-lock.json
 lazygit/state.yml
 db.zo
-test-env/windows-docker/data*
+data*
